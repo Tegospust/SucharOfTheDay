@@ -30,6 +30,7 @@ public class MainFrame extends BaseFrame implements ActionListener {
     
 //    kliknięcie klawisza btnClose
     class BtnCloseClick implements ActionListener {
+        
         private MainFrame mainFrame;
         BtnCloseClick(MainFrame aMainFrame) {
             this.mainFrame = aMainFrame;
@@ -56,9 +57,6 @@ public class MainFrame extends BaseFrame implements ActionListener {
         
         @Override
         public void mouseClicked(MouseEvent e) {
-            
-            if a == 2;
-            
             if ( e.getSource().equals(taChestNutText)) {
                 int btnNum = e.getButton();
                 int clkCount = e.getClickCount();
@@ -94,12 +92,11 @@ public class MainFrame extends BaseFrame implements ActionListener {
         
 //        ChestNuts chn = new ChestNuts(ChestNuts.FILE_CHEST_NUTS);
         
-        taChestNutText.addMouseListener(new MouseAdapter() {
-            
+        taChestNutText.addMouseListener(new MouseAdapter() {           
         });
-        
-        
         taChestNutText.addMouseListener(new ChestNutTextMouseHandler());
+        
+        
         taChestNutText.setText(getChestNutText());
         
     }

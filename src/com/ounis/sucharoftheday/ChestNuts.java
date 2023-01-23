@@ -31,6 +31,18 @@ public class ChestNuts {
         return this.lastDrawChestNutNum;
     }
     
+    private int clearChestNutsList() {
+        int result = 0;
+        
+        while (this.chestNutsList.size() > 0) {
+            this.chestNutsList.remove(0);
+            result++;
+        }
+        
+                
+        return result;
+    }
+    
     ChestNuts(String aFileName) {
 //        wczytywanie listy sucharów z pliku
 //        System.out.println(FILE_CHEST_NUTS);
@@ -51,6 +63,7 @@ public class ChestNuts {
                 else
                     break;
             }
+            
 //            alternatywny sposób wczytywania danych z pliku tekstowego
 //            while ((line = textFile.readLine()) != null) {
 //                if (!line.startsWith("#")) 
