@@ -56,6 +56,9 @@ public class MainFrame extends BaseFrame implements ActionListener {
         
         @Override
         public void mouseClicked(MouseEvent e) {
+            
+            if a == 2;
+            
             if ( e.getSource().equals(taChestNutText)) {
                 int btnNum = e.getButton();
                 int clkCount = e.getClickCount();
