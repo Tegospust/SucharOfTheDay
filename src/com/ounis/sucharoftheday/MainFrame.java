@@ -26,6 +26,8 @@ import javax.swing.plaf.basic.BasicComboBoxUI;
  */
 public class MainFrame extends BaseFrame implements ActionListener {
 
+    public static final String CHEST_NUT_TEXT_TOOL_TIP = "Kliknik dwukrotnie i wylosuj kolejnego sucharka";
+    
 //    kliknięcie klawisza btnClose
     class BtnCloseClick implements ActionListener {
         private MainFrame mainFrame;
