@@ -26,7 +26,7 @@ import javax.swing.plaf.basic.BasicComboBoxUI;
  */
 public class MainFrame extends BaseFrame implements ActionListener {
 
-    private static final String CHEST_NUT_TEXT_TOOL_TIP = "Kliknij dwukrotnie i wylosuj kolejnego sucharka";
+    private static final String CHESTNUT_TOOL_TIP_TEXT = "Kliknij dwukrotnie i wylosuj kolejnego sucharka";
     
 //    kliknięcie klawisza btnClose
     class BtnCloseClick implements ActionListener {
@@ -122,7 +122,7 @@ public class MainFrame extends BaseFrame implements ActionListener {
         taChestNutText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         taChestNutText.setLineWrap(true);
         taChestNutText.setRows(5);
-        taChestNutText.setToolTipText(this.CHEST_NUT_TEXT_TOOL_TIP);
+        taChestNutText.setToolTipText(this.CHESTNUT_TOOL_TIP_TEXT);
         jScrollPane1.setViewportView(taChestNutText);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
