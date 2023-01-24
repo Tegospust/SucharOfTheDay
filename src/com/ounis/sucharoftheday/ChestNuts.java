@@ -73,6 +73,7 @@ public class ChestNuts {
             textFile.close();
         }
         catch (Exception e) {
+//            throw new Exception(e.getLocalizedMessage());
             JOptionPane.showMessageDialog(null,String.format("Błąd wczytywania pliku: %s", FILE_CHEST_NUTS));
 //            System.err.println(String.format("Błąd wczytywania pliku: %s", FILE_CHEST_NUTS));
         }
