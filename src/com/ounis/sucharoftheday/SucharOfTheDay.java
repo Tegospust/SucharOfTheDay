@@ -4,6 +4,8 @@
  */
 package com.ounis.sucharoftheday;
 
+import java.util.Arrays;
+
 /**
  *
  * @author AndroidDev
@@ -13,10 +15,7 @@ public class SucharOfTheDay {
     /**
      * @param args the command line arguments
      */
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+    public static void main(String... args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -40,9 +39,12 @@ public class SucharOfTheDay {
         }
         //</editor-fold>
 
+//        System.out.println(Arrays.toString(args));
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 MainFrame mf = new MainFrame();
                 mf.centerFrame();
                 mf.setVisible(true);

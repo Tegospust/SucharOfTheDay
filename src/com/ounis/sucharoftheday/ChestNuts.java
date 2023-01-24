@@ -19,8 +19,8 @@ import javax.swing.JOptionPane;
  * @author AndroidDev
  */
 public class ChestNuts {
-    
-    public static final String FILE_CHEST_NUTS = "C:\\Users\\AndroidDev\\IdeaProjects\\SucharOfTheDay\\chestnuts.txt";
+//    C:\Users\AndroidDev\IdeaProjects\SucharOfTheDay\chestnutsutf8.txt 
+    public static final String FILE_CHEST_NUTS = "C:\\Users\\AndroidDev\\IdeaProjects\\SucharOfTheDay\\chestnutsutf8.txt";
     
     private String filename;
     
@@ -54,7 +54,8 @@ public class ChestNuts {
                           new InputStreamReader(new FileInputStream(this.filename)));
             String line;
             
-            while (true) {
+            for (;true;) {
+                
                 line = textFile.readLine();
                 if (line != null) {
                     if (line.startsWith("#") == false)
