@@ -4,6 +4,7 @@
  */
 package com.ounis.sucharoftheday;
 
+import com.ounis.utils.Strings;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -58,8 +59,15 @@ public class ChestNuts {
                 
                 line = textFile.readLine();
                 if (line != null) {
-                    if (line.startsWith("#") == false)
+                    if (!line.startsWith("#")) {
+//                        tutaj wydruk kodów ascii
+//                        System.out.println(line);
+//                        for (char c: line.toCharArray()) {
+//                            System.out.printf("%d ",Strings.ord(c));
+//                        }
+//                        System.out.println();
                         chestNutsList.add(line);
+                    }
                 }
                 else
                     break;
