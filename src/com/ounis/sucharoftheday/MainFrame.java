@@ -26,7 +26,8 @@ import javax.swing.plaf.basic.BasicComboBoxUI;
  */
 public class MainFrame extends BaseFrame implements ActionListener {
 
-    private static final String CHESTNUT_TOOL_TIP_TEXT = "Kliknij dwukrotnie i wylosuj kolejnego sucharka...";
+    private static final String CHESTNUT_TOOL_TIP_TEXT = "Dwuklik losuje kolejnego sucharka...";
+   
     
 //    kliknięcie klawisza btnClose
     class BtnCloseClick implements ActionListener {
@@ -40,14 +41,43 @@ public class MainFrame extends BaseFrame implements ActionListener {
         
         @Override
         public void actionPerformed(ActionEvent e) {
+            
             this.mainFrame.setVisible(false);
             this.mainFrame.dispatchEvent(new WindowEvent(this.mainFrame, WindowEvent.WINDOW_CLOSING));
         }
         
     }
     
+    
+    class btnCloseKeyListener implements KeyListener {
+        
+        private BaseFrame mainFrame;
+        btnCloseKeyListener(BaseFrame aMainFrame) {
+            this.mainFrame = aMainFrame;
+        }
+        
+        @Override
+        public void keyTyped(KeyEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+        
+        @Override
+        public void keyPressed(KeyEvent e) {
+            if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                this.mainFrame.setVisible(false);
+                this.mainFrame.dispatchEvent(new WindowEvent(this.mainFrame, WindowEvent.WINDOW_CLOSING));
+            }
+        }
+
+        @Override
+        public void keyReleased(KeyEvent e) {
+//            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
+        
+    }
+    
 //    dwukrotne kilknięcie lewym przyciskiem myszy na taTextChestNut
-    class ChestNutTextMouseHandler extends MouseAdapter {
+    class ChestNutTextMouseAdapter extends MouseAdapter {
 
 //        private JTextArea object;
 //        ChestNutTextMouseHandler() {
@@ -88,14 +118,16 @@ public class MainFrame extends BaseFrame implements ActionListener {
         btnClose.requestFocus();
         
         btnClose.addActionListener(new BtnCloseClick(this));
-            
+        btnClose.addKeyListener(new btnCloseKeyListener(this));
         
 //        ChestNuts chn = new ChestNuts(ChestNuts.FILE_CHEST_NUTS);
         
         taChestNutText.addMouseListener(new MouseAdapter() {           
         });
-        taChestNutText.addMouseListener(new ChestNutTextMouseHandler());
+        taChestNutText.addMouseListener(new ChestNutTextMouseAdapter());
         
+        
+                
         
         taChestNutText.setText(getChestNutText());
         
@@ -120,6 +152,7 @@ public class MainFrame extends BaseFrame implements ActionListener {
         btnClose.setText("Buachachachachacha!");
 
         taChestNutText.setEditable(false);
+        taChestNutText.setBackground(new java.awt.Color(204, 255, 255));
         taChestNutText.setColumns(20);
         taChestNutText.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         taChestNutText.setLineWrap(true);
