@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
  */
 public class ChestNuts {
 //    C:\Users\AndroidDev\IdeaProjects\SucharOfTheDay\chestnutsutf8.txt 
-    public static final String FILE_CHEST_NUTS = "C:\\Users\\AndroidDev\\IdeaProjects\\SucharOfTheDay\\chestnutsutf8.txt";
+    public static final String FILE_CHEST_NUTS = "/home/ounis/chestnuts.txt";//"chestnuts.txt";//"C:\\Users\\AndroidDev\\IdeaProjects\\SucharOfTheDay\\chestnutsutf8.txt";
     
     private String filename;
     

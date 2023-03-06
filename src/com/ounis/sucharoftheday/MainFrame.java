@@ -24,7 +24,7 @@ import javax.swing.plaf.basic.BasicComboBoxUI;
  *
  * @author AndroidDev
  */
-public class MainFrame extends BaseFrame implements ActionListener {
+public class MainFrame extends BaseFrame {//implements ActionListener {
 
     private static final String CHESTNUT_TOOL_TIP_TEXT = "Dwuklik losuje kolejnego sucharka...";
    
@@ -41,7 +41,6 @@ public class MainFrame extends BaseFrame implements ActionListener {
         
         @Override
         public void actionPerformed(ActionEvent e) {
-            
             this.mainFrame.setVisible(false);
             this.mainFrame.dispatchEvent(new WindowEvent(this.mainFrame, WindowEvent.WINDOW_CLOSING));
         }
@@ -229,9 +228,9 @@ public class MainFrame extends BaseFrame implements ActionListener {
     private javax.swing.JTextArea taChestNutText;
     // End of variables declaration//GEN-END:variables
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-//        this.setVisible(false);
-//        this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
-    }
+//    @Override
+//    public void actionPerformed(ActionEvent e) {
+////        this.setVisible(false);
+////        this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+//    }
 }

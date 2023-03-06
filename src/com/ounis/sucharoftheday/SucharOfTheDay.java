@@ -41,6 +41,18 @@ public class SucharOfTheDay {
 
 //        System.out.println(Arrays.toString(args));
         
+
+        int test = 1;
+        switch(test) {
+            case 1  : System.out.println("jeden");
+                        break;
+            case 2  : System.out.println("swa");
+                        break;
+            default : System.out.println("żadne z powyższych...");
+                
+                        
+        }
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
